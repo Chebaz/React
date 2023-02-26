@@ -1,8 +1,10 @@
 import React from "react";
-const name = "Simone";
 
+function sum(a, b) {
+  return a + b;
+}
 export default class HelloWorld extends React.Component {
   render() {
-    return <h1>Hello {name}</h1>;
+    return <h2>{sum(2, 3)}</h2>;
   }
 }
