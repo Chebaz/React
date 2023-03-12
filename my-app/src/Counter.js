@@ -5,15 +5,15 @@ export default class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      count: this.props.initialValuer,
     };
   }
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState((prevState) => ({
-        count: prevState.count + 1,
+        count: prevState.count + this.props.incrementMount,
       }));
-    }, 1000);
+    }, this.props.incrementInterval);
   }
   componentWillUnmount() {
     clearInterval(this.interval);
