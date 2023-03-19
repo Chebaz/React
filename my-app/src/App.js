@@ -1,15 +1,15 @@
 import React from "react";
 import HelloWorld from "./Hello";
-import Welcome from "./Welcome";
 import Counter from "./Counter";
 import ClickCounter from "./ClickCounter";
 import ClickTraker from "./ClickTracker";
+import InteractiveWelcome from "./InteractiveWelcome";
 export default class App extends React.Component {
   render() {
     return (
       <div>
         <HelloWorld />
-        <Welcome nome="John" age="14" />
+        <InteractiveWelcome />
         <Counter
           initialValuer={0}
           incrementInterval={2000}
