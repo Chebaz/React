@@ -6,20 +6,12 @@ export default class Login extends React.Component {
     password: "",
     remember: false,
   };
-  handleUsernameInputChange = (event) => {
-    this.setState({ username: event.target.value });
-  };
-  handlePasswordInputChange = (event) => {
-    this.setState({ password: event.target.value });
-  };
-  handleCheckboxClick = (event) => {
-    if (this.state.remember) {
-      this.setState({ remember: false });
-      console.log("falso");
-    } else {
-      this.setState({ remember: true });
-      console.log("vero");
-    }
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value,
+    });
   };
   render() {
     return (
@@ -29,22 +21,23 @@ export default class Login extends React.Component {
           name="username"
           type="text"
           value={this.state.username}
-          onChange={this.handleUsernameInputChange}
+          onChange={this.handleInputChange}
         />
         <p>password</p>
         <input
           name="password"
           type="password"
           value={this.state.password}
-          onChange={this.handlePasswordInputChange}
+          onChange={this.handleInputChange}
         />
         <p>checkbox</p>
         <input
-          name="checkbox"
+          name="remeber"
           type="checkbox"
           value={this.state.remember}
-          onChange={this.handleCheckboxClick}
+          onChange={this.handleInputChange}
         />
+        <button>Login</button>
       </div>
     );
   }
