@@ -26,3 +26,5 @@ export default class Counter extends React.Component {
     );
   }
 }
+/** si il costruttore è comunque richiesto perchè viene usato per inizializzare il componente
+ */
