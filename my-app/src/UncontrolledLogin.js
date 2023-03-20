@@ -21,6 +21,7 @@ export default class UncotrolledLogin extends React.Component {
             ref={(input) => {
               this.inputRefName = input;
             }}
+            autoFocus
           />
           <input
             type="password"
