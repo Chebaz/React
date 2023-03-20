@@ -5,6 +5,7 @@ export default class Login extends React.Component {
     username: "",
     password: "",
     remember: false,
+    abilitated: false,
   };
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -12,6 +13,19 @@ export default class Login extends React.Component {
     this.setState({
       [name]: value,
     });
+  };
+  onLogin = () => {
+    if (this.state.username === "" || this.state.password === "") {
+      return;
+    } else {
+      this.setState({
+        username: "",
+        password: "",
+      });
+      alert(
+        `username: ${this.state.username} password: ${this.state.password}`
+      );
+    }
   };
   render() {
     return (
@@ -37,7 +51,7 @@ export default class Login extends React.Component {
           value={this.state.remember}
           onChange={this.handleInputChange}
         />
-        <button>Login</button>
+        <button onClick={this.onLogin}>Login</button>
       </div>
     );
   }
