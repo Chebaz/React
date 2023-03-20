@@ -27,6 +27,12 @@ export default class Login extends React.Component {
       );
     }
   };
+  reset = () => {
+    this.setState({
+      username: "",
+      password: "",
+    });
+  };
   render() {
     return (
       <div>
@@ -52,6 +58,7 @@ export default class Login extends React.Component {
           onChange={this.handleInputChange}
         />
         <button onClick={this.onLogin}>Login</button>
+        <button onClick={this.reset}>Reset</button>
       </div>
     );
   }
