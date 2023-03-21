@@ -6,6 +6,7 @@ import ClickTraker from "./ClickTracker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
 import UncotrolledLogin from "./UncontrolledLogin";
+import TodoList from "./TodoList";
 export default class App extends React.Component {
   render() {
     return (
@@ -21,6 +22,9 @@ export default class App extends React.Component {
         <ClickTraker />
         <Login />
         <UncotrolledLogin />
+        <div>
+          <TodoList />
+        </div>
       </div>
     );
   }
