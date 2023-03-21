@@ -28,6 +28,9 @@ export default class Login extends React.Component {
     }
   };
   render() {
+    const { password } = this.state;
+    const isShortPassword = password.length < 8;
+    const classStyle = isShortPassword ? "red" : "green";
     return (
       <div>
         <p>username</p>
@@ -51,7 +54,9 @@ export default class Login extends React.Component {
           value={this.state.remember}
           onChange={this.handleInputChange}
         />
-        <button onClick={this.onLogin}>Login</button>
+        <button style={{ backgroundColor: classStyle }} onClick={this.onLogin}>
+          Login
+        </button>
       </div>
     );
   }
