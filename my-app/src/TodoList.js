@@ -22,12 +22,21 @@ export default class TodoList extends React.Component {
       array: [],
     });
   };
+  remove = (index) => {
+    this.state.array.splice(index, 1);
+    this.setState({
+      array: [...this.state.array],
+    });
+  };
   render() {
     return (
       <div>
         <ul>
           {this.state.array.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>
+              {item}
+              <button onClick={() => this.remove(index)}>Remove</button>
+            </li>
           ))}
         </ul>
         <input
