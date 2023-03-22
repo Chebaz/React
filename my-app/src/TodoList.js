@@ -1,4 +1,5 @@
 import React from "react";
+import List from "./List";
 export default class TodoList extends React.Component {
   state = {
     stuff: "",
@@ -31,14 +32,9 @@ export default class TodoList extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.state.array.map((item, index) => (
-            <li key={index}>
-              {item}
-              <button onClick={() => this.remove(index)}>Remove</button>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <List items={this.state.array} remove={this.remove} />
+        </div>
         <input
           name="stuff"
           type="text"
