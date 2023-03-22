@@ -7,6 +7,7 @@ import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
 import UncotrolledLogin from "./UncontrolledLogin";
 import TodoList from "./TodoList";
+import Container from "./Container";
 export default class App extends React.Component {
   render() {
     return (
@@ -25,6 +26,10 @@ export default class App extends React.Component {
         <div>
           <TodoList />
         </div>
+        <Container>
+          <h1>questa è una prova con i container</h1>
+          <p>serve a verificare se ho capito i container</p>
+        </Container>
       </div>
     );
   }
