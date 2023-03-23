@@ -1,6 +1,7 @@
 import React from "react";
+import { Welcome } from "./Welcome";
 export default class HelloWorld extends React.Component {
   render() {
-    return <h1>Hello World</h1>;
+    return <Welcome />;
   }
 }
