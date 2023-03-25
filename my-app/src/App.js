@@ -6,6 +6,7 @@ import { GitHubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { UseCount } from "./CounterButton";
 import { Form } from "./Form";
+import { CarDetails } from "./CarDetails";
 export default class HelloWorld extends React.Component {
   render() {
     return (
@@ -19,6 +20,16 @@ export default class HelloWorld extends React.Component {
         />
         <UseCount />
         <Form />
+        <div>
+          <br />
+          <CarDetails
+            data={{
+              model: "",
+              year: "",
+              color: "",
+            }}
+          />
+        </div>
       </div>
     );
   }
