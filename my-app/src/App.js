@@ -5,6 +5,7 @@ import { Counter } from "./Counter";
 import { GitHubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { UseCount } from "./CounterButton";
+import { Form } from "./Form";
 export default class HelloWorld extends React.Component {
   render() {
     return (
@@ -17,6 +18,7 @@ export default class HelloWorld extends React.Component {
           usernames={["Chebaz", "AnastasiaGandolfi", "georgev-97"]}
         />
         <UseCount />
+        <Form />
       </div>
     );
   }
