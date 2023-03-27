@@ -18,7 +18,11 @@ export default class App extends React.Component {
           <Route path="/" element={<Welcome nome="Simone" />} />
           <Route path="/counter" element={<Counter />} />
           <Route
-            path="/users/:username"
+            path="/users"
+            element={<GithubUserList usernames={["Chebaz"]} />}
+          />
+          <Route
+            path={`/users/:Chebaz`}
             element={<GitHubUser username="Chebaz" />}
           />
           <Route path="*" element={<NotFound />} />
