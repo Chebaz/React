@@ -16,6 +16,10 @@ export default class App extends React.Component {
         <Routes>
           <Route path="/" element={<Welcome nome="Simone" />} />
           <Route path="/counter" element={<Counter />} />
+          <Route
+            path="/users/:username"
+            element={<GitHubUser username="Chebaz" />}
+          />
         </Routes>
       </div>
     );
