@@ -20,7 +20,9 @@ export default class App extends React.Component {
           <Route
             path="/users"
             element={<GithubUserList usernames={["Chebaz"]} />}
-          />
+          >
+            <div>Add a user and select it</div>
+          </Route>
           <Route
             path={`/users/:Chebaz`}
             element={<GitHubUser username="Chebaz" />}
