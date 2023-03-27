@@ -7,29 +7,15 @@ import { GithubUserList } from "./GithubUserList";
 import { UseCount } from "./CounterButton";
 import { Form } from "./Form";
 import { CarDetails } from "./CarDetails";
-export default class HelloWorld extends React.Component {
+import { Route, Routes } from "react-router-dom";
+
+export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Welcome />
-        <Sum array={[1, 2, 3, 4, 5, 6]} />
-        <Counter />
-        <GitHubUser username="Chebaz" />
-        <GithubUserList
-          usernames={["Chebaz", "AnastasiaGandolfi", "georgev-97"]}
-        />
-        <UseCount />
-        <Form />
-        <div>
-          <br />
-          <CarDetails
-            data={{
-              model: "",
-              year: "",
-              color: "",
-            }}
-          />
-        </div>
+        <Routes>
+          <Route path="/" element={<Welcome nome="Simone" />} />
+        </Routes>
       </div>
     );
   }
