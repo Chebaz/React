@@ -8,6 +8,7 @@ import { UseCount } from "./CounterButton";
 import { Form } from "./Form";
 import { CarDetails } from "./CarDetails";
 import { Route, Routes, Link } from "react-router-dom";
+import { NotFound } from "./NotFound";
 
 export default class App extends React.Component {
   render() {
@@ -20,6 +21,7 @@ export default class App extends React.Component {
             path="/users/:username"
             element={<GitHubUser username="Chebaz" />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Link to="/">Welcome</Link>
         <br />
