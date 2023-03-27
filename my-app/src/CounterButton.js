@@ -1,28 +1,25 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useState } from "react";
 
 export function UseCount() {
   const [count, setCount] = useState(0);
 
-  const handleModify = (event) => {
-    if (event.target.name === "increment") {
-      setCount((count) => count + 1);
-    } else {
-      setCount((count) => count - 1);
-    }
-  };
-  const handleReset = () => {
-    setCount((count) => (count = 0));
-  };
+  const increment = useCallback(() => {
+    setCount(count + 1);
+  }, [count]);
+  const decrement = useCallback(() => {
+    setCount(count - 1);
+  }, [count]);
+  const reset = useCallback(() => {
+    setCount(0);
+  }, [count]);
 
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={handleModify} name="increment">
-        Increment
-      </button>
-      <button onClick={handleModify}>Decrement</button>
-      <button onClick={handleReset}>Reset</button>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 }
