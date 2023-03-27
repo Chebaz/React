@@ -7,7 +7,7 @@ import { GithubUserList } from "./GithubUserList";
 import { UseCount } from "./CounterButton";
 import { Form } from "./Form";
 import { CarDetails } from "./CarDetails";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 
 export default class App extends React.Component {
   render() {
@@ -21,6 +21,11 @@ export default class App extends React.Component {
             element={<GitHubUser username="Chebaz" />}
           />
         </Routes>
+        <Link to="/">Welcome</Link>
+        <br />
+        <Link to="/counter">Counter</Link>
+        <br />
+        <Link to="/users/:username">Github</Link>
       </div>
     );
   }
