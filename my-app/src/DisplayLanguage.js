@@ -1,11 +1,14 @@
-import React from "react";
-import LanguageContext from "./LanguageContext";
-export default class DisplayLanguage extends React.Component {
-  static contextType = LanguageContext;
+import React, { useContext } from "react";
 
-  render() {
-    const { language } = this.context;
+const LanguageContext = React.createContext("en");
+export default function DisplayLanguage() {
+  const language = useContext(LanguageContext);
 
-    return <p>la lingua selezionata è {language}</p>;
-  }
+  return (
+    <LanguageContext.Provider value={language}>
+      <div>
+        <h1>Language: {language}</h1>
+      </div>
+    </LanguageContext.Provider>
+  );
 }
