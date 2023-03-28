@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
 const LanguageContext = React.createContext("en");
-class LanguageProvider extends Component {
+export default class LanguageProvider extends React.Component {
   state = { selectedLanguage: "en" };
 
   handleLanguageChange = (event) => {
@@ -27,5 +27,3 @@ class LanguageProvider extends Component {
     );
   }
 }
-
-export default LanguageProvider;
