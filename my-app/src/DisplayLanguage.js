@@ -21,7 +21,6 @@ export default class LanguageProvider extends React.Component {
             <option value="es">Espanol</option>
             <option value="fr">Francais</option>
           </select>
-          {this.props.children}
         </div>
       </LanguageContext.Provider>
     );
