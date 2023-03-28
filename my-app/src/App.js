@@ -9,7 +9,7 @@ import UncotrolledLogin from "./UncontrolledLogin";
 import TodoList from "./TodoList";
 import Container from "./Container";
 import Welcome from "./Welcome";
-import DisplayLanguage from "./DisplayLanguage";
+import LanguageProvider from "./DysplayLanguage";
 export default class App extends React.Component {
   render() {
     return (
@@ -21,7 +21,7 @@ export default class App extends React.Component {
           incrementInterval={2000}
           incrementMount={2}
         />
-        <DisplayLanguage />
+        <LanguageProvider />
         <ClickCounter />
         <ClickTraker />
         <Login />
